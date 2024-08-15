@@ -1,0 +1,26 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  font-family: 'Raleway', sans-serif;
+}
+
+:root {
+  --color-primary: hsl(340, 66%, 47%);
+  --color-secondary: hsl(240, 60%, 63%);
+  --color-gray-100: hsl(180, 4%, 95%);
+  --color-gray-300: hsl(190, 6%, 80%);
+  --color-gray-500: hsl(195, 4%, 60%);
+  --color-gray-700: hsl(213, 5%, 40%);
+  --color-gray-900: hsl(225, 4%, 20%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --weight-normal: 500;
+  --weight-medium: 600;
+  --weight-bold: 800;
+}
