@@ -13,6 +13,7 @@ import Cart from './Cart.vue'
       </div>
     </div>
     <div class="main-header">
+      <a href="/" class="logo"><h1>Sole&Ankle</h1></a>
       <nav>
         <a href="/sale">Sale</a>
         <a href="/new">New&nbsp;Releases</a>
@@ -21,6 +22,7 @@ import Cart from './Cart.vue'
         <a href="/kids">Kids</a>
         <a href="/collections">Collections</a>
       </nav>
+      <span></span>
     </div>
   </header>
 </template>
@@ -35,22 +37,17 @@ import Cart from './Cart.vue'
   justify-content: space-between;
   padding: 8px 32px;
 }
-.super-header a {
-  color: var(--color-gray-300);
-  text-decoration: none;
-}
-.super-header a:hover {
-  color: var(--color-white);
-  text-decoration: underline;
-}
+
 .marketing-message {
   color: var(--color-white);
 }
+
 .right-section {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 input[type='search'] {
   background-color: transparent;
   border: 0;
@@ -61,19 +58,62 @@ input[type='search']::placeholder {
   color: var(--color-gray-300);
 }
 
-.main-header {
-  padding: 0 32px;
-  border-bottom: 1px solid var(--color-gray-300);
-}
-nav a {
-  font-size: 1.125rem;
-  text-transform: uppercase;
+.super-header a {
+  color: var(--color-gray-300);
   text-decoration: none;
+
+  &:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+}
+
+.main-header {
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray-300);
+  display: flex;
+  padding: 0 32px;
+  justify-content: space-between;
+}
+
+.logo,
+.main-header > span {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  flex-shrink: 0;
+}
+
+nav a {
   color: var(--color-gray-900);
+  font-size: 1.125rem;
   font-weight: var(--weight-medium);
+  text-decoration: none;
+  text-transform: uppercase;
 
   &:first-of-type {
     color: var(--color-secondary);
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 </style>
