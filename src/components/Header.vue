@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Cart from './Cart.vue'
+import SearchInput from './search-input/SearchInput.vue'
 </script>
 
 <template>
@@ -7,7 +8,7 @@ import Cart from './Cart.vue'
     <div class="super-header">
       <span class="marketing-message">Free shipping on domestic orders over $75!</span>
       <div class="right-section">
-        <input type="search" placeholder="Search..." />
+        <SearchInput />
         <a href="/help">Help</a>
         <a href="/cart"><Cart /></a>
       </div>
@@ -46,16 +47,6 @@ import Cart from './Cart.vue'
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-input[type='search'] {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--color-gray-300);
-  color: var(--color-white);
-}
-input[type='search']::placeholder {
-  color: var(--color-gray-300);
 }
 
 .super-header a {

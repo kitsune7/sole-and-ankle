@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Head } from '@unhead/vue/components'
 import Header from './components/Header.vue'
+import Sidebar from './components/Sidebar.vue'
+import ShoeView from './components/ShoeView.vue'
 </script>
 
 <template>
@@ -21,11 +23,17 @@ import Header from './components/Header.vue'
   </Head>
 
   <Header />
-  <main></main>
+  <main>
+    <Sidebar />
+    <ShoeView />
+  </main>
 </template>
 
 <style scoped>
 main {
+  align-items: flex-start;
+  display: flex;
+  gap: 64px;
   padding: 64px 32px;
 }
 </style>
